@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Operators</h1>
+    <P>
+        JavaScript Arithmetic Operators
+    </P>
+    <script>
+        let a=10;
+        let b=2;
+        let c=a+b;
+        let d=a-b;
+        let e=a*b;
+        let f=a/b;
+        let g=a%b;
+        let h=a++;
+        let i=a--;
+        document.write('Addition_'+  c+"<br>");
+        document.write('Subtraction_'+d+"<br>");
+        document.write(e+"<br>");
+        document.write(f+"<br>");
+        document.write(g+"<br>");
+        document.write(h+"<br>");
+        document.write(i+"<br>");
+
+    </script>
+    <script>
+        document.write("<br>")
+        let x=5;
+        let y=1;
+        document.write(x==y);
+        document.write("<br>");
+        document.write(x!=y);
+        document.write("<br>");
+        document.write(x===y);
+        document.write("<br>");
+        document.write(x+y);
+        document.write("<br>");
+        document.write(x!==y);
+        document.write("<br>");
+        document.write(x>y);
+        document.write("<br>");
+    </script>
+    <script>
+        document.write("<br>");
+        let s=5;
+        let t=10;
+        document.write(s>10 || t>10);
+        document.write("<br>");
+        document.write(s>2 && t>7);
+
+    </script>
+    <script>
+        document.write("<br>");
+        let n=5;
+        let p=2;
+        p=n;
+        //p=p+n
+        document.write(p);
+
+
+    </script>
+</body>
+</html>

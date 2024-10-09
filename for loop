@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            border: 2px;
+            background-color: aquamarine;
+        }
+        h1 {
+            color: #ec2121;
+        }
+        h5 {
+            color: #3e27d2;
+        }
+        hr {
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<hr>
+<body style="border: ;">
+    <h1>Type Of Operators</h1>
+    <h5>Javascript operators are used to perform different types of mathematical and logical computations.</h5>
+    <script>
+        // Parsing integers from strings
+        let b = "5";
+        let c = "10";
+        let sum = parseInt(b) + parseInt(c);
+        document.write('Sum of parsed integers: ' + sum + "<br>");
+    </script>
+    <br>
+    <script>
+        // Using nullish coalescing
+        document.write("<br>");
+        let x = 10;
+        let y; // y is undefined
+        y = y ?? 2; // y will be set to 2 because it's undefined
+        document.write('Value of x / y: ' + (x / y)); // Outputs: 5
+    </script>
+    <hr>
+    <br>
+    <h1>if condition</h1>
+    <h5>Use if to specify a block of code to be executed, if a specified condition is true</h5>
+    <script>
+        document.write("<br>");
+        let mathu=20;
+        if(mathu>70){
+            document.write("mathu is above 70");
+
+        }
+        else if(mathu<70 && mathu > 50){
+            document.write("emil in second stage");
+        }
+        else{
+            document.write("emil in third stage");
+
+        }
+        
+       
+        document.write("<br>");
+        document.write("after if condition");
+    </script>
+    <hr>
+    <h1>for loop</h1>
+    <h5>Loops are handy, if you want to run the same code over and over again, each time with a different value.</h5>
+
+    <script>
+        document.write("<br>");
+        document.write("Counting from 1 to 5:<br>");
+        
+        for (let i = 1; i <= 5; i++) {
+            document.write(i + "<br>"); // Outputs numbers 1 to 5
+        }
+    </script>
+    <hr>
+    <script>
+        document.write("Counting from 1 to 10:<br>");
+        
+        for (let i = 1; i <= 10; i++) {
+            document.write(i + "<br>"); // Outputs each number from 1 to 10
+        }
+    </script>
+    <script>
+        for (let i = 0; i < carCollection.length; i++) {
+            const car = carCollection[i];
+            console.log(`${car.year} ${car.make} ${car.model}`);
+          }
+    </script>
+    <h2>Days of the week</h2>
+    <script>
+      let days = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ];
+      for (a = 0; a < days.length; a++) {
+        document.write(days[a] + "<br>");
+      }
+    </script>
+    <hr />
+    <h2>Even number or Odd number</h2>
+    <script>
+      for (let x = 1; x <= 10; x++) {
+        if (x % 2 === 1) {
+          document.write(x + "- Even number" + "<br>");
+        } else {
+          document.write(x + "- Odd number" + "<br>");
+        }
+      }
+    </script>
+        
+    
+    
+</body>
+</html>

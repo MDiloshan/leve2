@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>diloshan</title>
+    <style>
+      body {
+          background-color: rgb(207, 196, 196);
+          font-family: Arial, sans-serif;
+          color: white;
+          text-align: center;
+          padding: 5%;
+          border: 10px solid;
+      }
+
+      input {
+          font-size: 2rem;
+          padding: 15px;
+          margin: 10px;
+          border: 2px solid silver;
+          border-radius: 5px;
+          width: 80%; 
+          max-width: 300px; 
+      }
+
+      button {
+          font-size: 2rem;
+          padding: 15px 20px;
+          margin: 10px;
+          cursor: pointer;
+          border: 2px solid silver;
+          border-radius: 5px;
+          color: white;
+          flex: 1; 
+          max-width: 120px; 
+      }
+
+      .add-button { background-color:rgb( 11, 0, 128); }
+      .subtract-button { background-color:rgb( 11, 0, 128); }
+      .multiply-button { background-color:rgb( 11, 0, 128); }
+      .divide-button { background-color: rgb( 11, 0, 128); }
+      .clear-button { background-color: darkgray; }
+
+      button:hover { background-color: rgb(0, 137, 139); }
+
+      #result {
+          font-size: 2rem; 
+          padding: 15px; 
+          margin: 20px 0;
+          background-color: rgba(143, 152, 143, 0.7); 
+          border-radius: 5px;
+          display: inline-block; 
+          width: 80%; 
+          max-width: 300px; 
+      }
+
+      .button-row {
+          display: flex;
+          justify-content: center; 
+          margin-bottom: 10px; 
+      }
+  </style>
+</head>
+<body>
+
+    <h1>Simple Calculator</h1>
+    <h2>Result: <span id="result">0</span></h2>
+    
+    <input id="DIO1" type="number" value="0" placeholder="Enter first number" />
+    <input id="DIO2" type="number" value="0" placeholder="Enter second number" /><br><br>
+
+    <div class="button-row">
+        <button class="add-button" onclick="add()">+</button>
+        <button class="subtract-button" onclick="subtract()">-</button>
+    </div>
+    
+    <div class="button-row">
+        <button class="multiply-button" onclick="multiply()">*</button>
+        <button class="divide-button" onclick="divide()">/</button>
+        <button class="clear-button" onclick="clearFields()">C</button>
+    </div>
+
+    
+
+    <script>
+        function add() {
+            const num1 = parseFloat(document.getElementById("DIO1").value) || 0;
+            const num2 = parseFloat(document.getElementById("DIO2").value) || 0;
+            document.getElementById("result").innerText = num1 + num2;
+        }
+
+        function subtract() {
+            const num1 = parseFloat(document.getElementById("DIO1").value) || 0;
+            const num2 = parseFloat(document.getElementById("DIO2").value) || 0;
+            document.getElementById("result").innerText = num1 - num2;
+        }
+
+        function multiply() {
+            const num1 = parseFloat(document.getElementById("DIO1").value) || 0;
+            const num2 = parseFloat(document.getElementById("DIO2").value) || 0;
+            document.getElementById("result").innerText = num1 * num2;
+        }
+
+        function divide() {
+            const num1 = parseFloat(document.getElementById("DIO1").value) || 0;
+            const num2 = parseFloat(document.getElementById("DIO2").value) || 0;
+            if (num2 !== 0) {
+                document.getElementById("result").innerText = num1 / num2;
+            } else {
+                document.getElementById("result").innerText = "Cannot divide by zero";
+            }
+        }
+
+        function clearFields() {
+            document.getElementById("DIO1").value = 0;
+            document.getElementById("DIO2").value = 0;
+            document.getElementById("result").innerText = 0;
+        }
+    </script>
+
+</body>
+</html>
+

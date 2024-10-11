@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practice</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            text-align: center;
+            color: #4a90e2;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #333;
+            font-size: 1.5rem;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+        button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 5px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #357ABD;
+            transform: translateY(-2px);
+        }
+        p {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        p:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Practice</h1>
+    
+    <div class="container">
+        <h2>Add Names</h2>
+        <input type="text" id="nameInput" placeholder="Enter a name"/>
+        <button onclick="addMethod()">Add</button>
+        <p id="namesDisplay"></p>
+    </div>
+    
+    <div class="container">
+        <h2>Add and Sort Numbers</h2>
+        <input type="text" id="numberInput" placeholder="Enter a number"/>
+        <button onclick="addNumber()">Add Number</button>
+        <button onclick="sortNumbers()">Sort Numbers</button>
+        <p id="numbersDisplay"></p>
+    </div>
+
+    <script>
+        const names = [];
+        const numbers = [];
+
+        function addMethod() {
+            let name = document.getElementById("nameInput").value;
+            if (name) {
+                names.push(name);
+                document.getElementById("namesDisplay").innerHTML = "Names: " + names.join(', ');
+                document.getElementById("nameInput").value = ''; // Clear input field
+            }
+        }
+
+        function addNumber() {
+            let number = document.getElementById("numberInput").value;
+            if (number) {
+                numbers.push(Number(number));
+                document.getElementById("numberInput").value = ''; // Clear input field
+            }
+        }
+
+        function sortNumbers() {
+            const sortedNumbers = [...numbers].sort((a, b) => a - b);
+            document.getElementById("numbersDisplay").innerHTML = "Sorted Numbers: " + sortedNumbers.join(', ');
+        }
+    </script>
+</body>
+</html>
